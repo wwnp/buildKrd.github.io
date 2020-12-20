@@ -1,0 +1,546 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  font-size: 16px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+address {
+  margin-bottom: 0;
+  font-style: normal;
+  line-height: inherit;
+}
+
+main,
+section,
+footer {
+  min-height: 200px;
+  padding: 25px 0;
+
+  border: 1px solid #e2e0e0;
+}
+
+a {
+  color: #000000;
+  transition: color .1s linear;
+}
+
+a:hover {
+  color: #557f94;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.section-built-title {
+  position: relative;
+  text-shadow: 1px 2px 2px rgb(136, 137, 137);
+  font-weight: bold;
+}
+
+.section-built-title:after {
+  content: "";
+  display: block;
+
+  width: 60px;
+  height: 2px;
+
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+
+  background-color: #1b84a4;
+
+}
+
+dl,
+ol,
+ul {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+/* HEADER------------------------------------------ */
+
+header {
+  padding: 10px 0;
+
+  font-size: 1rem;
+}
+@media (min-width: 576px){
+  header {
+    padding: 10px 0;
+  
+    font-size: 0.85rem;
+  }
+}
+
+.bg-nav {
+  background-color: rgb(218, 220, 220);
+}
+
+
+.underline-custom {
+  display: inline-block;
+
+  width: 100%;
+}
+
+.underline-custom::after {
+  content: "";
+  display: block;
+
+  width: 0;
+  height: 2px;
+
+  background-color: rgb(31, 59, 57);
+  transition: 200ms;
+}
+
+.underline-custom:hover::after {
+  width: 100%;
+}
+
+
+.nav-link {
+  width: 100%;
+
+}
+
+.mailto-link {
+  position: relative;
+}
+
+.mailto-message {
+  display: none;
+
+  padding: 3px;
+
+  position: absolute;
+  top: 1px;
+  left: 50%;
+  transform: translate(-50%, -90%);
+
+  white-space: nowrap;
+  font-size: 0.8rem;
+  background-color: rgb(17, 57, 57);
+  color: white;
+  border-radius: 15px;
+}
+
+.mailto-message:after,
+.mailto-message:before {
+  content: '';
+}
+
+.mailto-message:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 0, 0, 0);
+  border-top-color: #000000;
+  border-width: 4px;
+  margin-left: -4px;
+}
+
+.mailto-link:hover .mailto-message,
+.mailto-link:focus .mailto-message,
+.mailto-link:focus-within .mailto-message {
+  display: block;
+}
+
+
+
+
+/* MAIN------------------------------------------ */
+
+
+.main {
+  min-height: 500px;
+
+  position: relative;
+  z-index: 1;
+
+  background: url(../images/bg.jpg) center no-repeat;
+  background-size: cover;
+
+}
+
+.main-shroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+}
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 400px;
+
+  position: relative;
+  z-index: 3;
+
+  color: #fff;
+}
+
+@media (min-width:576px) {
+  .main-block {
+    min-height: 738px;
+  }
+
+}
+
+.main-block h1 {
+  font-size: 1.5rem;
+}
+
+@media (min-width:576px) {
+  .main-block h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:768px) {
+  .main-block h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width:1200px) {
+  .main-block h1 {
+    font-size: 5rem;
+  }
+}
+
+.main-block p {
+  font-size: 1.5rem;
+}
+
+@media (min-width:576px) {
+  .main-block p {
+    font-size: 2rem;
+  }
+}
+
+.btn-build {
+  color: #ffffff;
+  background-color: #5fb0c2;
+  border-color: #a4a7a4;
+  font-family: 'Roboto Mono';
+  font-weight: 300;
+  transition: color .1s linear,
+    background .1s linear,
+    border .1s linear,
+    box-shadow .1s linear;
+}
+
+.btn-build:active {
+  background-color: #1d8ba4;
+  border-color: #a4a7a4;
+  color: #fff;
+}
+
+.btn-build.focus,
+.btn-build:focus {
+  color: #fff;
+  background-color: #218388;
+  border-color: #1e7c7e;
+  box-shadow: 0 0 0 0.2rem rgba(72, 166, 180, 0.5);
+}
+
+.btn-build:hover {
+  color: #fff;
+  background-color: #217288;
+  border-color: #1e717e;
+}
+
+
+/* SERVICES------------------------------------------ */
+
+.services {
+  min-height: 300px;
+}
+
+.services-block {
+  display: block;
+
+  position: relative;
+
+  width: 287px;
+  height: 250px;
+
+  background-color: #eff;
+
+  overflow: hidden;
+  cursor: pointer;
+  transition: color .1s linear,
+    background .1s linear,
+    border .1s linear,
+    box-shadow .1s linear;
+}
+
+.services-block:hover {
+  box-shadow: 1px 2px 4px black;
+}
+
+.services-block:hover .services-img:before {
+  background-color: transparent;
+}
+
+
+.services-img {
+  display: block;
+
+  position: absolute;
+  top: 0px;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+
+  width: 287px;
+  height: 180px;
+
+  background: url(../images/repaircable.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.services-img:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.4s;
+}
+
+
+
+
+.services-block-title {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 200px;
+  padding: 8px 5px;
+
+  text-align: center;
+
+  line-height: 1;
+  color: #F1EDEE;
+  font-size: 21px;
+  border: 1px solid #F1EDEE;
+  background-color: transparent;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.services-block:hover .services-block-title {
+  color: #f0f0f0;
+  background-color: rgb(50, 50, 50);
+}
+
+.desc {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background-color: #F1EDEE;
+  bottom: 0;
+  overflow: hidden;
+  margin: 0;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  box-sizing: border-box;
+  transition: color 0.4s, background-color 0.4s;
+}
+
+.services-block:hover .desc {
+  color: #1e7c7e;
+  background-color: rgb(66, 65, 65);
+}
+
+/* PRICE------------------------------------------ */
+
+.table {
+  font-size: 0.85em;
+}
+
+@media (min-width:576px) {
+  .table {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+/* PROJECTS carousel-------------------------------- */
+
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-caption-my {
+  position: absolute;
+  /* right: 15%; */
+  bottom: 0;
+  left: 0%;
+  z-index: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 0.5rem;
+}
+
+.carousel-h5 {
+  font-size: 0.95rem;
+}
+
+.carousel-p {
+  font-size: 1.25em;
+}
+
+@media (min-width: 576px) {
+  .carousel-caption-my {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .carousel-h5 {
+    font-size: 1.45rem;
+  }
+
+  .carousel-p {
+    font-size: 1.25em;
+  }
+}
+
+.carousel-box-shadow {
+  box-shadow: 3px 5px 15px rgb(198, 196, 196);
+}
+
+/* LICENSE------------------------------------------ */
+.license-block {
+  width: 100%;
+
+  background-color: rgb(211, 214, 214);
+}
+
+.license-box {
+  transition: all .1s linear;
+}
+
+@media (min-width: 576px) {
+  .license-block:hover .license-box {
+    transform: translate3d(20px, 20px, 20px);
+    box-shadow: 1px 1px 2px black;
+  }
+}
+
+/* MAP------------------------------------------ */
+.bg-map {
+  background-color: #464747;
+}
+
+.inframe-map {
+  width: 100%;
+  height: 300px;
+}
+
+@media (min-width: 576px) {
+  .inframe-map {
+    width: 100%;
+    height: 600px;
+  }
+}
+
+/* SEO------------------------------------------ */
+.block-seo-1,
+.block-seo-2 {
+  font-size: 0.8rem;
+}
+
+@media (min-width:576px) {
+
+  .block-seo-1,
+  .block-seo-2 {
+    font-size: 1.25rem;
+  }
+}
+
+
+
+
+
+/* FOOTER------------------------------------------ */
+
+footer {
+  font-size: 0.8rem;
+}
+
+.footer-brand i {
+  font-size: 32px;
+  color: #fff;
+}
+
+.footer-nav li a {
+  color: #fff;
+  transition: all ease .1s;
+}
+.footer-nav li a:hover {
+  color: #557f94;
+}
